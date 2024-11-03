@@ -9,13 +9,14 @@ int main() {
     // Definição das variáveis para armazenar as propriedades das cidades
     // Você pode utilizar o código do primeiro desafio
 
-     char nomeEstadoA [50], nomeEstadoB [50];
-     int codigoEstadoA, codigoEstadoB;
-     char nomeCidadeA[50], nomeCidadeB[50];
-     int codigoCidadeA, codigoCidadeB;
-     double populacaoA, populacaoB;
-     double areaTerritorialA, areaTerritorialB;
-     double pibA, pibB;
+     char nomeEstadoA [60], nomeEstadoB [60];
+     char cidade1 [50], cidade2 [50];
+     int codigoEstadoA, codigoEstadoB, codigoCidadeA, codigoCidadeB;
+     float 
+     populacaoA, populacaoB, 
+     areaTerritorialA, areaTerritorialB, 
+     pibA, pibB;
+     
     
     // Cadastro das Cartas:
     // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
@@ -35,7 +36,7 @@ int main() {
      printf("Digite o código A para representar esse Estado:\n");
      scanf("%d", &codigoEstadoA);
      printf("Digite o nome da Cidade:\n");
-     scanf("%s", &nomeCidadeA);
+     scanf(" %s", &cidade1);
      printf("Digite o código 1 para representar essa cidade:\n");
      scanf("%d", &codigoCidadeA);
      printf("População:\n");
@@ -45,7 +46,7 @@ int main() {
      printf("PIB:\n");
      scanf("%f", &pibA);
      
-    printf("AGORA VAMOS PARA A PRÓXIMA CARTA!\n");
+     printf("AGORA VAMOS PARA A PRÓXIMA CARTA!\n");
 
 
     // Solicitando ao usuário os dados do segundo estado e cidade.
@@ -57,7 +58,7 @@ int main() {
      printf("Digite o código B para representar esse Estado:\n");
      scanf("%d", &codigoEstadoB);
      printf("Digite o nome da Cidade:\n");
-     scanf("%s", &nomeCidadeB);
+     scanf(" %s", &cidade1);
      printf("Digite o código 2 para representar essa cidade:\n");
      scanf("%d", &codigoCidadeB);
      printf("População:\n");
@@ -66,6 +67,8 @@ int main() {
      scanf("%f", &areaTerritorialB);
      printf("PIB:\n");
      scanf("%f", &pibB);
+
+     
 
     // Comparação de Cartas:
     // Desenvolva a lógica de comparação entre duas cartas.
@@ -80,24 +83,25 @@ int main() {
     
 
     if (populacaoA < populacaoB) {
-        printf("Cidade 1 tem menor população!\n");
+        printf("%s tem a menor população!\n", nomeEstadoA);
     } else {
-        printf("Cidade 2 tem menor população!\n");
+        printf("%s tem a menor população!\n", nomeEstadoA);
     }
 
     if (areaTerritorialA > areaTerritorialB){
-        printf("Cidade 1 tem maior Extensão Territorial.\n");
+        printf("%s tem a maior Extensão Territorial!\n", nomeEstadoA);
        } else {
-            printf("Cidade 2 tem maior Extensão Territorial.\n");    
+            printf("%s tem a maior Extensão Territorial!\n", nomeEstadoB);    
         }
     
     if (pibA > pibB ){
-        printf(" Cidade 1 tem o maior PIB.\n");
+        printf(" %s tem o maior PIB!\n", nomeEstadoA);
     } else {
-        printf("Cidade 2 tem o maior PIB.\n");
+        printf("%s tem o maior PIB!\n", nomeEstadoB);
     }
 
-
+printf("A CIDADE %s É A VENCEDORA, POIS GANHA A CIDADE QUE TEM A MAIOR EXTENSÃO TERRITORIAL!\n", nomeEstadoA, nomeEstadoB);
+printf("PARABÉNS!");
     // Exibição dos Resultados:
     // Após realizar as comparações, exiba os resultados para o usuário.
     // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
